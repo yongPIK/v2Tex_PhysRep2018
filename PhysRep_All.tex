@@ -1,0 +1,91 @@
+\documentclass[3p,sort&compress]{elsarticle}
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{todonotes,hyperref,url}
+\usepackage{gensymb}
+
+\journal{Physics Reports}
+
+%% `Elsevier LaTeX' style
+\bibliographystyle{elsarticle-num}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Complex network approaches to nonlinear time series analysis}
+
+\author[ECNU]{Yong Zou\corref{corrauthor}}
+\ead{yzou@phy.ecnu.edu.cn}
+\address[ECNU]{Department of Physics, East China Normal University, Shanghai 200062, China}
+
+\author[MD,PIK]{Reik V. Donner\corref{corrauthor}}
+\cortext[corrauthor]{Corresponding author}
+\ead{reik.donner@pik-potsdam.de}
+\address[MD]{Department of Water, Environment, Construction and Safety, Magdeburg--Stendal University of Applied Sciences, Breitscheidstra{\ss}e 2, 39114 Magdeburg, Germany}
+\address[PIK]{Potsdam Institute for Climate Impact Research (PIK) -- Member of the Leibniz Association, Telegrafenberg A31, 14473 Potsdam, Germany}
+
+\author[PIK]{Norbert Marwan}
+\ead{marwan@pik-potsdam.de}
+
+\author[PIK,SW]{Jonathan F. Donges}
+\ead{donges@pik-potsdam.de}
+	\address[SW]{Stockholm Resilience Centre, Stockholm University, Kr\"aftriket 2B, 114 19 Stockholm, Sweden}
+
+\author[PIK,UK,HU,RU1,RU2]{J\"urgen Kurths}
+\ead{kurths@pik-potsdam.de}
+ \address[UK]{Institute for Complex Systems and Mathematical Biology, University of Aberdeen, Aberdeen AB243UE, United Kingdom}
+ \address[HU]{Department of Physics, Humboldt University Berlin, Newtonstra{\ss}e 15, 12489 Berlin, Germany}
+ \address[RU1]{Department of Control Theory, Nizhny Novgorod State University, Gagarin Avenue 23, 606950 Nizhny Novgorod, Russia}
+ \address[RU2]{Institute of Applied Physics of the Russian Academy of Sciences, 603950 Nizhny Novgorod, Russia}
+
+
+\begin{abstract}
+
+In the last decade, there has been a growing body of literature addressing the utilization of complex network methods for the characterization of dynamical systems based on time series. While both nonlinear time series analysis and complex network theory are widely considered to be established fields of complex systems sciences with strong links to nonlinear dynamics and statistical physics, the thorough combination of both approaches has become an active field of nonlinear time series analysis, which has allowed addressing fundamental questions regarding the structural organization of nonlinear dynamics as well as the successful treatment of a variety of applications from a broad range of disciplines. In this report, we provide an in-depth review of existing approaches of time series networks, covering their methodological foundations, interpretation and practical considerations with an emphasis on recent developments. After a brief outline of the state-of-the-art of nonlinear time series analysis and the theory of complex networks, we focus on three main network approaches, namely, phase space based recurrence networks, visibility graphs and Markov chain based transition networks, all of which have made their way from abstract concepts to widely used methodologies. These three concepts, as well as several variants thereof will be discussed in great detail regarding their specific properties, potentials and limitations. More importantly, we emphasize which fundamental new insights complex network approaches bring into the field of nonlinear time series analysis. In addition, we summarize examples from the wide range of recent applications of these methods, covering rather diverse fields like climatology, fluid dynamics, neurophysiology, engineering and economics, and demonstrating the great potentials of time series networks for tackling real-world contemporary scientific problems. The overall aim of this report is to provide the readers with the knowledge how the complex network approaches can be applied to their own field of real-world time series analysis.
+\end{abstract}
+
+\begin{keyword}
+Complex networks; nonlinear dynamics; recurrences; visibility; transition networks
+\end{keyword}
+
+\end{frontmatter}
+\tableofcontents
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%*****************************CHAPTER/SECTION 1: INTRODUCTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{Chapter01_Introduction/Chapter01_Introduction.tex}
+
+\input{Chapter02_CompNetworkT/Chapter02_CompNetworkT.tex}
+
+\input{Chapter03_RecurrenceNt/Chapter03_RecurrenceNt.tex}
+
+\input{Chapter04_VisibilityGt/Chapter04_VisibilityGt.tex}
+
+\input{Chapter05_TransitionNt/Chapter05_TransitionNt.tex}
+
+\input{Chapter06_Applications/Chapter06_Applications.tex}
+
+\input{Chapter07_Software/Chapter07_Software.tex}
+
+\input{Chapter08_Discussion/Chapter08_Discussion.tex}
+
+\section*{Acknowledgements}
+The reported development of complex network frameworks for nonlinear time series analysis has been a community effort, to which various colleagues have been actively contributing. We particularly acknowledge the contributions and discussions by Jan H. Feldhoff, Zhongke Gao, Shuguang Guan, Jobst Heitzig, Zonghua Liu, Michael Small, Marco Thiel, and Marc Wiedermann.
+
+Financial support of this work has been granted by the National Natural Science Foundation of China (grant nos. 11872182, 11835003), the Natural Science Foundation of Shanghai (Grant No. 17ZR1444800), the German Research Association (DFG) via the IRTG 1740 ``Dynamical phenomena in complex networks'' and DFG projects no.~MA4759/8 and MA4759/9, the European Union's Horizon 2020 Research and Innovation Programme under the Marie Sk{\l}odowska-Curie grant agreement no.~691037 (project QUEST), the German Federal Ministry for Education and Research (BMBF) via the Young Investigators Group CoSy-CC$^2$ (grant no.~01LN1306A), the Stordalen Foundation (via the Planetary Boundaries Research Network PB.net), the Earth League's EarthDoc network and the Leibniz Association (project DOMINOES). Numerical computations have been performed using the software packages \texttt{pyunicorn} \cite{Donges2015} and the CRP Toolbox for Matlab, which are available at \url{http://tocsy.pik-potsdam.de}.
+
+Parts of this report have been based on text from an earlier book chapter \cite{Donner2015RPBook}. We acknowledge the corresponding permission of the publisher of that chapter (Springer Nature) to reuse the corresponding material in this work. In a similar spirit, we are grateful to the publishers of several of our previous works for their permission to reuse several key figures in this review.
+
+\input{Chapter09_Appendix/Chapter09_Appendix.tex}
+
+\bibliography{PhysRep2018N,refBooks,rpN}
+
+
+\end{document}

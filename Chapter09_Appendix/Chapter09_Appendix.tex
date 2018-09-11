@@ -1,0 +1,78 @@
+\appendix
+\section{Mathematical models}
+Here we list the mathematical models used in the examples of this paper: 
+
+\begin{enumerate}
+\item The Lorenz system \cite{Lorenz1963}
+\begin{equation}
+\left(\begin{array}{c}\dot{x}\\ \dot{y}\\ \dot{z}\end{array}\right)=\left(\begin{array}{c}\sigma(y-x) \\ x(r-y)\\ xy-\beta z \end{array}\right), 
+\label{eqlorenz}
+\end{equation}
+with the parameters $r=28$, $\sigma=10$ and $\beta=8/3$. 
+
+\item The R\"ossler system \cite{Roessler1976}
+\begin{equation}
+\left( \begin{array}{c}\dot{x}\\ \dot{y}\\ \dot{z}\end{array} \right) = \left( \begin{array}{c} -y-z\\ x+ay\\ b+z(x-c) \end{array} \right),
+\label{eq:roessler}
+\end{equation}
+where $a, b$, and $c$ are parameters. 
+
+\item Auto-regressive process $p$ order
+\begin{equation} \label{def:AR}
+x_t = \sum_{j=1}^{p}\varphi_j x_{t-j} + \varepsilon_t, 
+\end{equation}
+where $\varphi_j, j \in [1, p],$ are real-valued coefficients of the model, and $\varepsilon_t$ is white noise. We further assume that the error terms $\varepsilon_t$ follow a Gaussian distribution with zero mean and unit variance. 
+
+\item The H\'enon map
+\begin{equation} \label{eq:henon}
+ \left \{ \begin{aligned}
+x_t &= A - x_{t-1}^2 + B y_{t-1}, \\
+y_t &= x_{t-1},
+\end{aligned}
+\right.
+\end{equation}
+with $A=1.4$ and $B=0.3$. 
+
+\item Two R\"ossler systems that are diffusively coupled via the second $y$-component:
+\begin{equation}
+\begin{split}
+\dot{x}^{(1)} &= -(1+\nu)y^{(1)} - z^{(1)} \\
+\dot{y}^{(1)} &= (1+\nu)x^{(1)} + ay^{(1)} + \mu_{21}(y^{(2)}-y^{(1)}) \\
+\dot{z}^{(1)} &= b+z^{(1)}(x^{(1)}-c) \\
+\dot{x}^{(2)} &= -(1-\nu)y^{(2)} - z^{(2)} \\
+\dot{y}^{(2)} &= (1-\nu)x^{(2)} + ay^{(2)} + \mu_{12}(y^{(1)}-y^{(2)}) \\
+\dot{z}^{(2)} &= b+z^{(2)}(x^{(2)}-c), 
+\end{split}
+\label{eq:coupled_roessler}
+\end{equation}
+where $\nu$ is the frequency mismatch and $\mu_{12}$ and $\mu_{21}$ are coupling strength. Symmetric coupling is achieved if $\mu_{12} = \mu_{21}$. 
+
+\item Three diffusively coupled R\"ossler systems via the $x$ component \cite{Nawrath2010}:
+\begin{equation} \label{threeRosPRL}
+\left ( \begin{aligned}
+& \dot{x}_k \\ 
+& \dot{y}_k \\
+& \dot{z}_k
+\end{aligned} \right )
+= \left ( \begin{aligned}
+& -\omega_k y_k - z_k + \sum_{l\neq k} \mu_{k,l}(x_l - x_k) \\ 
+& \omega_k x_k + 0.165 y_k \\
+& 0.4 + z_k(x_k - 8.5)
+\end{aligned} \right ),
+\end{equation}
+where $k = 1, 2, 3$ and $\mu$ is the coupling strength.
+
+\item The standard map
+\begin{equation} \label{std_map_book}
+\mathbf{v}(t): \left \{ \begin{aligned}
+& y_{n+1} = y_{n} + \frac{\kappa}{2 \pi}\sin(2 \pi x_{n}),  \\
+& x_{n+1} = x_{n} + y_{n+1},
+\end{aligned} \;\;\text{mod}\;\; 1
+\right.
+\end{equation}
+with $\kappa $ denoting the system's single control parameter. 
+
+\end{enumerate}
+
+
+
